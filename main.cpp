@@ -122,6 +122,7 @@ public:
 		while (window.isOpen())
 		{
 			time = renderClock.getElapsedTime();
+			if (time.asMicroseconds() == 0) continue;
 			float fFps = 1000000 / time.asMicroseconds();
 			std::stringstream s;
 			s << fFps << " fps";
